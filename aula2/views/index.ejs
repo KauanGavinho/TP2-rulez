@@ -1,0 +1,25 @@
+<html>
+    <script>
+        function formula(){
+            let x = document.getElementById("n1").value
+            let y = document.getElementById("n2").value
+            let z = x/y
+            
+            resultado.innerHTML = (z)
+        }
+    </script>
+    <body>
+        <p>
+            N= m/M
+        </p>
+        <br>
+        <p id="resultado"></p>
+        <form>
+            Digite o número de m: 
+            <input type="number" name="n1" id="n1"><br><br>
+            Digite o número de M:
+            <input type="number" name="n2" id="n2">
+            <input type="submit" value="resultado" onclick="formula()">
+        </form>
+    </body>
+</html>
