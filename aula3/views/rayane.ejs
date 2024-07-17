@@ -34,11 +34,11 @@
  </head>
  <body>
   <h1>Digite dois números:</h1>
-  <form>
+  <form action="/resultado" method="get">
    <label> Número 1: </label>
-   <input id= "n1"/>
+   <input id= "n1" name="n1"/>
    <label> Número 2: </label>
-   <input id= "n2"/>
+   <input id= "n2" name="n2"/>
    <button type="button"  onclick="fatorial(n1.value)">Fatorial do Número 1: </button>
    <button type="button" onclick="soma()">Somar</button>
    <button type="button" onclick="subtracao()">Subtrair</button>
