@@ -6,7 +6,7 @@ app.set('view engine', 'ejs')
 app.get('/', (request, response) => {
  let x = 5
  let y = 4
-response.send(`x e y tem os seguintes valores: ${x} e ${y} logo, se multiplicados o resultado será: ${x*y}`)
+response.send(`x1 e y tem os seguintes valores: ${x} e ${y} logo, se multiplicados o resultado será: ${x*y}`)
 })
 
 app.get('/index', (request, response) => {
