@@ -1,19 +1,37 @@
 const { log } = require('console')
 const express = require('express')
+const { request } = require('http')
 const app = express()
 app.use(express.urlencoded({ extended: true }))
 app.set('view engine', 'ejs')
+
 app.get('/', (request, response) => {
- let x = 5
- let y = 4
-response.send(`x e y tem os seguintes valores: ${x} e ${y} logo, se multiplicados o resultado será: ${x*y}`)
+var resposta =""
+
+response.render('rayane',{resposta})
 })
 
-app.get('/index', (request, response) => {
-response.render('index')
+app.post('/resultado1', (request, response) => {
+     resposta = parseFloat (request.body.n1) + parseFloat(request.body.n2)
+    
+response.render('rayane')
 })
 
-app.get('/rayane', (request, response) => {
+app.post('/resultado2', (request, response) => {
+    resposta = parseFloat (request.body.n1) - parseFloat(request.body.n2)
+    
+response.render('rayane')
+})
+
+app.post('/resultado3', (request, response) => {
+     resposta = parseFloat (request.body.n1) * parseFloat(request.body.n2)
+    
+response.render('rayane')
+})
+
+app.post('/resultado4', (request, response) => {
+     resposta = parseFloat (request.body.n1) / parseFloat(request.body.n2)
+    
 response.render('rayane')
 })
 
